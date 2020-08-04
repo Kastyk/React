@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ReactDOMServer from 'react-dom/server';
 import App from './App';
+import RenderToString from './RenderToString';
 
 if (module.hot) {
   const hotEmitter = require('webpack/hot/emitter');
@@ -20,3 +22,4 @@ if (module.hot) {
   });
 }
 ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOMServer.renderToString(<RenderToString />);
